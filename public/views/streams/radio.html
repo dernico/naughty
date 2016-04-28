@@ -1,0 +1,29 @@
+
+
+<input type="text" data-bind="value: searchterm, event: { keyup: searchRadioOnEnter }"></input>
+<br />
+<div class="button" data-bind="click: searchRadio">radio.de Suche</div>
+
+<br />
+<br />
+<hr />
+<div class="button" data-bind="click: saveRadio">Save current</div>
+
+
+
+<div class="list clearboth" data-bind="foreach: results">
+    <div class="list-item">
+        
+        <div class="image">
+            <img data-bind="attr: { src: image }" alt="" />    
+        </div>
+        
+        <div class="content">
+            <div data-bind="text: name"></div>
+            <div data-bind="text: genre"></div>
+            <div>
+                <div class="button" data-bind="click: $parent.playRadio">Play</div>
+            </div>
+        </div>
+    </div>
+</div>
